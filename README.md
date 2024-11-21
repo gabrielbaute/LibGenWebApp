@@ -56,6 +56,7 @@ LibGenWebApp es una interfaz web para la API de LibGen desarrollada por Harrison
 
 5. **Generar la clave secreta**
    - Ejecuta el script `generate_secret_key.py` y copia la clave generada en el archivo `.env`:
+   
    ```sh
    python generate_secret_key.py
    ```
@@ -133,6 +134,6 @@ La clave secreta (`SECRET_KEY`) es fundamental para la seguridad de tu aplicaci�
 
 ## Agradecimientos
 
-Este proyecto se basa en la [API de LibGen](https://github.com/harrison-broadbent) desarrollada por Harrison Broadbent. Agradecemos enormemente su trabajo y contribución.
+Este proyecto se basa en la [API de LibGen](https://github.com/harrison-broadbent/libgen-api) desarrollada por [Harrison Broadbent](https://github.com/harrison-broadbent). Agradecemos enormemente su trabajo y contribución.
 
 ¡Gracias por usar LibGenWebApp!
