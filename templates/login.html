@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+    <h1 class="title">Login</h1>
+    <div class="section is-medium">
+        <div class="container">
+            <form method="POST" action="{{ url_for('login') }}">
+                {{ form.hidden_tag() }}
+                <div class="field">
+                    <label class="label">{{ form.email.label }}</label>
+                    <div class="control">
+                        {{ form.email(class="input") }}
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">{{ form.password.label }}</label>
+                    <div class="control">
+                        {{ form.password(class="input") }}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        {{ form.remember() }} {{ form.remember.label }}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        {{ form.submit(class="button is-primary") }}
+                    </div>
+                </div>
+            </form> 
+        </div>
+    </div>
+{% endblock %}

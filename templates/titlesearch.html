@@ -1,0 +1,43 @@
+{% extends "base.html" %}
+
+{% block title %}Search by Title{% endblock %}
+
+{% block content %}
+    <h1 class="title">Search by Title</h1>
+    <div class="section is-medium">
+        <div class="container">
+            <form method="POST" action="{{ url_for('titlesearch') }}">
+                {{ form.hidden_tag() }}
+                <div class="field">
+                    <label class="label">{{ form.title.label }}</label>
+                    <div class="control">
+                        {{ form.title(class="input") }}
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">{{ form.year.label }}</label>
+                    <div class="control">
+                        {{ form.year(class="input") }}
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">{{ form.language.label }}</label>
+                    <div class="control">
+                        {{ form.language(class="select") }}
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">{{ form.extension.label }}</label>
+                    <div class="control">
+                        {{ form.extension(class="select") }}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        {{ form.submit(class="button is-primary") }}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %}Search Results{% endblock %}
+
+{% block content %}
+    <h1 class="title">Search Results</h1>
+    {% if results %}
+        <div class="table-container">
+            <table class="table is-striped is-hoverable">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author(s)</th>
+                        <th>Publisher</th>
+                        <th>Year</th>
+                        <th>Language</th>
+                        <th>Download</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for result in results %}
+                        <tr>
+                            <td>{{ result['Title'] }}</td>
+                            <td>{{ result['Author'] }}</td>
+                            <td>{{ result['Publisher'] }}</td>
+                            <td>{{ result['Year'] }}</td>
+                            <td>{{ result['Language'] }}</td>
+                            <td><a href="{{ result['Mirror_1'] }}" class="button is-link">Download</a></td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p>No results found.</p>
+    {% endif %}
+{% endblock %}

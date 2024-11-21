@@ -1,0 +1,35 @@
+/* styles.css */
+
+/* Dark Theme */
+body.dark-theme {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+/* Ajuste de colores específicos para elementos en dark-theme */
+.dark-theme .navbar,
+.dark-theme .table,
+.dark-theme .footer {
+    background-color: #1f1f1f;
+    color: #e0e0e0;
+}
+
+.dark-theme .table tbody tr:nth-child(odd) {
+    background-color: #2a2a2a;
+}
+
+.dark-theme .table tbody tr:nth-child(even) {
+    background-color: #1e1e1e;
+}
+
+.dark-theme .button {
+    background-color: #6200ea;
+    color: #ffffff;
+}
+
+/* Añadir esta regla para centrar la imagen */
+.image.is-centered {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

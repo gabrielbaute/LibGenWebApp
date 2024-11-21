@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block title %}Index{% endblock %}
+{% block content %}
+  <section class="hero">
+    <div class="hero-body">
+      <p class="title is-1">Welcome to the LibGen Search App!</p>
+      <p class="subtitle">Use this app to search for books and articles available in the LibGen library. Follow the steps below to get started:</p>
+    </div>
+  </section>
+  <div class="section">
+    <div class="container">
+      <div class="block has-text-centered">
+        <figure class="image is-128x128 is-centered">
+          <img src="{{ url_for('static', filename='images/ship.jpg') }}" alt="LibGen Ship">
+        </figure>
+      </div>
+      <div class="content">
+        <br>
+        <ol>
+            <li><strong>Create an Account:</strong> If you don't have an account yet, click on the "Sign Up" button in the navigation bar to register. If you already have an account, click on "Log in" to access your account.</li>
+            <li><strong>Search by Author:</strong> To search for books or articles by a specific author, click on the "Author Search" link in the navigation bar. Enter the author's name in the search box and click "Find". You will be redirected to a page with the search results.</li>
+            <li><strong>Search by Title:</strong> To search for books or articles by title, click on the "Title Search" link in the navigation bar. Enter the title in the search box and click "Find". You will be redirected to a page with the search results.</li>
+            <li><strong>View Search Results:</strong> On the search results page, you will see a list of books or articles that match your search criteria. Each result will display the title, author(s), publisher, year, language, and a download link.</li>
+            <li><strong>Download Books or Articles:</strong> Click on the "Download" button next to the desired result to download the book or article.</li>
+            <li><strong>View Search History:</strong> To view your search history, click on the "Search History" link in the navigation bar. This will show a list of all your previous searches, along with the date and time each search was performed.</li>
+            <li><strong>Switch Between Themes:</strong> You can toggle between dark mode and light mode using the "Dark Mode" or "Light Mode" button in the navigation bar. Your preference will be saved for future visits.</li>
+        </ol>
+    
+        <p>If you have any questions or need further assistance, feel free to contact us. Enjoy using the LibGen Search App!</p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

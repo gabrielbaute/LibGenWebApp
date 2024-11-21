@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %}Reset Password{% endblock %}
+
+{% block content %}
+    <h1 class="title">Reset Your Password</h1>
+    <p>If you have forgotten your password, you can request a password reset link to be sent to your registered email address.</p>
+    <div class="container">
+        <div class="section">
+            <form method="POST" action="{{ url_for('reset_request') }}">
+                {{ form.hidden_tag() }}
+                <div class="field">
+                    <label class="label">{{ form.email.label }}</label>
+                    <div class="control">
+                        {{ form.email(class="input") }}
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        {{ form.submit(class="button is-primary") }}
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

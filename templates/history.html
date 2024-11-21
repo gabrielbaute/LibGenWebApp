@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block title %}Search History{% endblock %}
+
+{% block content %}
+    <h1 class="title">Search History</h1>
+    <div class="section is-medium">
+        {% if searches %}
+        <div class="table-container">
+            <table class="table is-striped is-hoverable">
+                <thead>
+                    <tr>
+                        <th>Search Term</th>
+                        <th>Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for search in searches %}
+                        <tr>
+                            <td>{{ search.item }}</td>
+                            <td>{{ search.date_search.strftime('%Y-%m-%d %H:%M:%S') }}</td>
+                        </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    {% else %}
+        <p>No search history found.</p>
+    {% endif %}
+    </div>
+{% endblock %}
